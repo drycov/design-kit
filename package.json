@@ -1,6 +1,6 @@
 {
   "name": "@drycov/design-kit",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Shared Telegram-style design system for ops platform",
   "type": "module",
   "main": "./dist/index.js",
@@ -16,9 +16,11 @@
     "./css/tokens": "./css/tokens.css",
     "./css/components": "./css/components.css",
     "./css/layout": "./css/layout.css",
+    "./css/utilities": "./css/utilities.css",
+    "./css/ops": "./css/ops.css",
     "./package.json": "./package.json"
   },
-  "files": ["css", "dist", "src", "README.md", "ADOPTION.md"],
+  "files": ["css", "dist", "src", "README.md", "ADOPTION.md", "COMPONENTS.md", "CHANGELOG.md"],
   "sideEffects": ["**/*.css"],
   "scripts": {
     "build": "tsc -p tsconfig.json",
