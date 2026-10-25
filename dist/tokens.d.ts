@@ -1,0 +1,33 @@
+export declare const darkTokens: {
+  readonly bg: "#0e1621";
+  readonly secondary: "#17212b";
+  readonly tertiary: "#242f3d";
+  readonly surface: "#1c2733";
+  readonly text: "#f3f6f8";
+  readonly hint: "#91a3b7";
+  readonly link: "#68b7f3";
+  readonly button: "#2aabee";
+  readonly buttonText: "#ffffff";
+  readonly success: "#53bd86";
+  readonly danger: "#eb6570";
+  readonly warning: "#e5ac4b";
+  readonly purple: "#a967ff";
+  readonly radius: 14;
+};
+export declare const lightTokens: {
+  readonly bg: "#f2f4f7";
+  readonly secondary: "#ffffff";
+  readonly tertiary: "#e8eef3";
+  readonly surface: "#ffffff";
+  readonly text: "#182533";
+  readonly hint: "#697f91";
+  readonly link: "#2481cc";
+  readonly button: "#2481cc";
+  readonly buttonText: "#ffffff";
+  readonly success: "#24804a";
+  readonly danger: "#ca384d";
+  readonly warning: "#b7791f";
+  readonly purple: "#7c3aed";
+  readonly radius: 14;
+};
+export type ThemeScheme = "dark" | "light";
