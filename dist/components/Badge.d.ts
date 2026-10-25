@@ -1,5 +1,14 @@
 import type { ReactNode } from "react";
-export type BadgeTone = "online" | "offline" | "maintenance" | "unknown" | "admin" | "engineer" | "warning";
+export type BadgeTone =
+  | "online"
+  | "offline"
+  | "maintenance"
+  | "unknown"
+  | "admin"
+  | "engineer"
+  | "installer"
+  | "warning"
+  | "info";
 export interface BadgeProps {
   tone?: BadgeTone;
   children: ReactNode;

@@ -1,58 +1,50 @@
 # Adoption — единый стиль платформы
 
-Источник истины: **https://github.com/drycov/design-kit**
+Источник истины: **https://github.com/drycov/design-kit** (v0.3)
 
 ## Проекты
 
 | Проект | Тип UI | Как подключено |
 |--------|--------|----------------|
-| **equipment-bot** | FastAPI + Jinja | `webapp/static/telegram-theme.css` + inline tokens в `base.html` |
+| **equipment-bot** | FastAPI + Jinja | `webapp/static/design-kit.css` + Telegram admin |
 | **cms** | React + Vite | vendor `frontend/src/vendor/design-kit/` |
 | **optibudget** | React + Vite | vendor `src/vendor/design-kit/` |
 | **ppr-system** | React + static | vendor `frontend/src/vendor/design-kit/` |
 | **backup_tool** | static SPA | `scanner/static/css/design-kit.css` |
 
-## Рекомендуемый способ (без npm github)
-
-CI/Vercel часто ломают `github:drycov/design-kit`. Предпочтительно **vendor**:
+## Vendor (рекомендуется)
 
 ```text
-src/vendor/design-kit/
-  css/tokens.css
-  css/components.css
-  css/layout.css
-  css/index.css
-  theme.ts   # optional for React
+src/vendor/design-kit/css/
+  index.css      # tokens + components + layout + utilities + ops
+  tokens.css
+  components.css
+  layout.css
+  utilities.css
+  ops.css
 ```
 
 ```ts
 import "./vendor/design-kit/css/index.css";
-// optional:
 import { applyTelegramTheme } from "./vendor/design-kit/theme";
 applyTelegramTheme();
 ```
 
-## Токены (обязательные)
+После обновления upstream — перекопировать `css/` из design-kit.
 
-```css
---tg-bg, --tg-secondary, --tg-tertiary, --tg-surface
---tg-text, --tg-hint, --tg-link
---tg-button, --tg-button-text
---tg-success, --tg-danger, --tg-warning, --tg-purple
---tg-border, --tg-control-bg, --tg-focus
---radius, --radius-sm, --sidebar-w, --font-sans
-```
+## CSS entry points
 
-Тема: `html[data-tg-theme="dark"|"light"]`.
+| Import | Contents |
+|--------|----------|
+| `@drycov/design-kit/css` | all |
+| `.../css/tokens` | variables only |
+| `.../css/components` | UI controls |
+| `.../css/layout` | shell / grids |
+| `.../css/utilities` | spacing / text helpers |
+| `.../css/ops` | equipment / map / status |
 
-## Классы
+## React API (v0.3)
 
-- Buttons: `.btn` / `.btn-primary` / `.btn-secondary` / `.btn-danger`
-- Cards: `.card` / `.tg-group`
-- Badges: `.badge-online` / `.badge-offline` / `.badge-engineer` / …
-- Layout: `.layout` / `.sidebar` / `.content` / `.page-head`
-- Forms: `.dk-input` / `.form-group`
+`Button`, `Badge`, `Card`, `StatCard`, `Alert`, `Input`, `Modal`, `Tabs`, `EmptyState`, `Spinner`, `Chip`, `Progress`, `applyTelegramTheme`.
 
-## Синхронизация
-
-При смене палитры в этом репозитории — скопировать `css/` в vendor каждого проекта.
+См. [COMPONENTS.md](./COMPONENTS.md).

@@ -3,8 +3,10 @@ export const darkTokens = {
   secondary: "#17212b",
   tertiary: "#242f3d",
   surface: "#1c2733",
+  elevated: "#1e2c3a",
   text: "#f3f6f8",
   hint: "#91a3b7",
+  muted: "#6d7f92",
   link: "#68b7f3",
   button: "#2aabee",
   buttonText: "#ffffff",
@@ -12,6 +14,7 @@ export const darkTokens = {
   danger: "#eb6570",
   warning: "#e5ac4b",
   purple: "#a967ff",
+  info: "#68b7f3",
   radius: 14,
 };
 export const lightTokens = {
@@ -19,8 +22,10 @@ export const lightTokens = {
   secondary: "#ffffff",
   tertiary: "#e8eef3",
   surface: "#ffffff",
+  elevated: "#ffffff",
   text: "#182533",
   hint: "#697f91",
+  muted: "#8a9bab",
   link: "#2481cc",
   button: "#2481cc",
   buttonText: "#ffffff",
@@ -28,5 +33,6 @@ export const lightTokens = {
   danger: "#ca384d",
   warning: "#b7791f",
   purple: "#7c3aed",
+  info: "#2481cc",
   radius: 14,
 };
